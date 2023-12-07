@@ -1,0 +1,294 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+* {
+    margin: 0;
+}
+  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Chivo', sans-serif;
+    overflow-y: hidden;
+    max-width: 1440px;
+}
+  
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+input, button, textarea, select {
+    font: inherit;
+}
+  
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+#root, #__next {
+    isolation: isolate;
+}
+
+.desktop-img,
+.tablet-img {
+    display: none;
+}
+
+.dots {
+    display: none;
+}
+
+main {
+    background-image: linear-gradient(to top, #121725, #030101c4),
+    url('assets/mobile/image-host.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    padding: 3rem 0;
+}
+
+
+.logo {
+    align-self: center;
+    width: 150px;
+}
+
+.title {
+    color: #FFF;
+    font-size: 26px;
+    font-weight: 300;
+
+    text-transform: uppercase;
+}
+
+.green-text {
+    color: #54E6AF;
+}
+
+.info {
+    color: #C2CBE5;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 1.3rem;
+}
+
+.email-address {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.email {
+    color: #FFF;
+    background-color: #2C344B;
+    border-radius: 30px;
+    border: none;
+
+    padding: 1rem;
+    margin: 0 1.5rem;
+    text-align: left;
+}
+
+.request {
+    border: none;
+    background-color: #54E6AF;
+    border-radius: 30px;
+    color: #121725;
+    font-weight: bold;
+
+    padding: 1rem;
+    margin: 0 1.5rem;
+    text-decoration: none;
+}
+
+.request:hover {
+    cursor: pointer;
+}
+
+.request:active {
+    cursor: pointer;
+    background-color: #B3FFE2;
+}
+
+.btn-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.spotify {
+    width: 56px;
+    height: 17px;
+}
+
+.apple {
+    width: 45px;
+    height: 17px;
+}
+
+.google {
+    width: 73px;
+    height: 11px;
+}
+
+.pocket {
+    width: 77px;
+    height: 15px;
+}
+
+
+@media only screen and (min-width: 660px) {
+    body {
+        background-color: #121725;
+    }
+
+    main {
+        background-image: linear-gradient(to top, #54e6ae62, #54e6ae00),
+        url('assets/tablet/image-host.jpg');
+        background-repeat: no-repeat;
+        background-position: right 0px;
+        background-size: 491px 767px;
+
+        display: grid;
+        grid-template-columns: repeat(12, 48px);
+        grid-template-rows: repeat(auto, 60px);
+    }
+
+    .logo {
+        align-self: flex-start;
+        margin-left: 2.6rem;
+        grid-area: 2 / 1 / 2 / 3;
+    }
+
+    .card {
+        background-color: #121725;
+        grid-area: 4  / 1 / 10 / 8;
+
+        text-align: left;
+        padding: 5rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .title {
+        font-size: 3rem;
+        line-height: 56px;
+    }
+
+    .info {
+        font-size: 18px;
+        padding: 0 8.8rem 0 0;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .btn-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        background-color: #2C344B;
+        border-radius: 50px;
+        width: 427px;
+        margin-left: .6rem;
+    }
+
+    .request {
+        background-color: #54E6AF;
+        border-radius: 30px;
+        color: #121725;
+        font-weight: bold;
+    
+        padding: .8rem 1.2rem;
+        margin: .2rem 0 .2rem 0;
+        text-decoration: none;
+    }
+
+    .socials {
+        margin: 1rem 0;
+        width: 536px;
+        
+    }
+    
+    .spotify {
+        width: 96px;
+        height: 29px;
+    }
+    .apple {
+        width: 78px;
+        height: 29px;
+    }
+
+    .google {
+        width: 125px;
+        height: 18px;
+    }
+
+    .pocket {
+        width: 129px;
+        height: 26px;
+    }
+
+
+    .dots {
+        display: block;
+        grid-area: 9 / 1 / 13 / 5;
+        margin: 1rem 0 0 1.4rem;
+
+        width: 232px;
+        height: 104px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    main {
+        background-image: linear-gradient(to top, #54e6ae62, #54e6ae00),
+        url('assets/desktop/image-host.jpg');
+        background-repeat: no-repeat;
+        background-position: right 0px;
+        background-size: 888px 640px;
+
+        display: grid;
+        grid-template-columns: repeat(12, 48px);
+        grid-template-rows: repeat(auto, 60px);
+    }
+
+    .logo {
+        margin-left: 7.5rem;
+        grid-area: 1 / 2 / 1 / 4;
+    }
+
+    .card {
+        grid-area: 4 / 3 / 10 / 12;
+    }
+
+    .dots {
+        display: block;
+        grid-area: 6 / 13 / 9 / 16;
+        margin: 2.5rem 0 0 1.4rem;
+
+        width: 232px;
+        height: 104px;
+    }
+}
